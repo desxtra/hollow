@@ -57,13 +57,13 @@ define gui.interface_text_color = '#404040'
 ## Fonts and Font Sizes ########################################################
 
 ## The font used for in-game text.
-define gui.text_font = "DejaVuSans.ttf"
+define gui.text_font = "ShareTechMono-Regular.ttf"
 
 ## The font used for character names.
-define gui.name_text_font = "DejaVuSans.ttf"
+define gui.name_text_font = "ShareTechMono-Regular.ttf"
 
 ## The font used for out-of-game text.
-define gui.interface_text_font = "DejaVuSans.ttf"
+define gui.interface_text_font = "ShareTechMono-Regular.ttf"
 
 ## The size of normal dialogue text.
 define gui.text_size = 33
@@ -81,7 +81,7 @@ define gui.label_text_size = 36
 define gui.notify_text_size = 24
 
 ## The size of the game's title.
-define gui.title_text_size = 75
+define gui.title_text_size = 25
 
 
 ## Main and Game Menus #########################################################
