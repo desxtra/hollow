@@ -297,24 +297,28 @@ screen navigation():
             ysize 1
             yalign 0.73
         else: 
-            xoffset 60
+            xpos 130
             yalign 0.5
         
         
 
         spacing gui.navigation_spacing
 
-        if main_menu:
+        if renpy.get_screen("main_menu"):
 
             textbutton _("Start") action Start() 
 
-        else:
+        if not main_menu:
 
-            textbutton _("History") action ShowMenu("history")
+
+            textbutton _("Main Menu") action MainMenu()
 
             textbutton _("Save") action ShowMenu("save")
 
-        textbutton _("Gallery") action ShowMenu("load")
+            textbutton _("History") action ShowMenu("history")
+
+
+        textbutton _("Load") action ShowMenu("load")
 
         textbutton _("Options") action ShowMenu("preferences")
 
@@ -322,9 +326,7 @@ screen navigation():
 
             textbutton _("End Replay") action EndReplay(confirm=True)
 
-        elif not main_menu:
-
-            textbutton _("Main Menu") action MainMenu()
+          
 
         textbutton _("About") action ShowMenu("about")
 
@@ -482,9 +484,11 @@ screen game_menu(title, scroll=None, yinitial=0.0, spacing=0):
                     transclude
 
     use navigation
-
+    
     textbutton _("Return"):
         style "return_button"
+        xpos 130
+        ypos 300
 
         action Return()
 
@@ -536,7 +540,7 @@ style game_menu_label:
     ysize 180
 
 style game_menu_label_text:
-    size gui.title_text_size
+    size 100
     color gui.accent_color
     yalign 0.5
 
@@ -604,7 +608,7 @@ screen load():
 
     tag menu
 
-    use file_slots(_("Load"))
+    use file_slots(_("Load"))   
 
 
 screen file_slots(title):

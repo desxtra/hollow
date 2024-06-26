@@ -28,7 +28,7 @@ define config.check_conflicting_properties = True
 define gui.accent_color = '#000000'
 
 ## The color used for a text button when it is neither selected nor hovered.
-define gui.idle_color = '#d8efff'
+define gui.idle_color = '#000'
 
 ## The small color is used for small text, which needs to be brighter/darker to
 ## achieve the same effect.

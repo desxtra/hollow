@@ -1,37 +1,39 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/screens.rpy", line 362, in execute
-    screen main_menu():
-  File "game/screens.rpy", line 362, in execute
-    screen main_menu():
-  File "game/screens.rpy", line 375, in execute
-    use navigation
-  File "game/screens.rpy", line 288, in execute
-    screen navigation():
-  File "game/screens.rpy", line 288, in execute
-    screen navigation():
-  File "game/screens.rpy", line 290, in execute
-    vbox:
-  File "game/screens.rpy", line 315, in execute
-    if renpy.get_screen(game_menu):
-  File "game/screens.rpy", line 315, in <module>
-    if renpy.get_screen(game_menu):
-NameError: name 'game_menu' is not defined
+  File "game/screens.rpy", line 605, in execute
+    screen save():
+  File "game/screens.rpy", line 605, in execute
+    screen save():
+  File "game/screens.rpy", line 609, in execute
+    use file_slots(_("Save"))
+  File "game/screens.rpy", line 619, in execute
+    screen file_slots(title):
+  File "game/screens.rpy", line 619, in execute
+    screen file_slots(title):
+  File "game/screens.rpy", line 623, in execute
+    use game_menu(title):
+  File "game/screens.rpy", line 433, in execute
+    screen game_menu(title, scroll=None, yinitial=0.0, spacing=0):
+  File "game/screens.rpy", line 433, in execute
+    screen game_menu(title, scroll=None, yinitial=0.0, spacing=0):
+  File "game/screens.rpy", line 437, in execute
+    if main_menu:
+  File "game/screens.rpy", line 440, in execute
+    add gui.game_menu_background
+Exception: An empty string cannot be used as a displayable.
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "renpy/common/_layout/screen_main_menu.rpym", line 28, in script
-    python hide:
+  File "renpy/common/_layout/screen_load_save.rpym", line 35, in script
+    $ ui.interact()
   File "F:\Naiii\APK\RenPY\renpy-8.2.3-sdk\renpy\ast.py", line 823, in execute
     renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
   File "F:\Naiii\APK\RenPY\renpy-8.2.3-sdk\renpy\python.py", line 1178, in py_exec_bytecode
     exec(bytecode, globals, locals)
-  File "renpy/common/_layout/screen_main_menu.rpym", line 28, in <module>
-    python hide:
-  File "renpy/common/_layout/screen_main_menu.rpym", line 35, in _execute_python_hide
-    ui.interact()
+  File "renpy/common/_layout/screen_load_save.rpym", line 35, in <module>
+    $ ui.interact()
   File "F:\Naiii\APK\RenPY\renpy-8.2.3-sdk\renpy\ui.py", line 301, in interact
     rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
   File "F:\Naiii\APK\RenPY\renpy-8.2.3-sdk\renpy\display\core.py", line 2166, in interact
@@ -44,6 +46,7 @@ Full traceback:
     d.visit_all(callback, seen)
   File "F:\Naiii\APK\RenPY\renpy-8.2.3-sdk\renpy\display\displayable.py", line 431, in visit_all
     d.visit_all(callback, seen)
+  [Previous line repeated 1 more time]
   File "F:\Naiii\APK\RenPY\renpy-8.2.3-sdk\renpy\display\screen.py", line 480, in visit_all
     callback(self)
   File "F:\Naiii\APK\RenPY\renpy-8.2.3-sdk\renpy\display\core.py", line 2688, in <lambda>
@@ -52,25 +55,33 @@ Full traceback:
     self.update()
   File "F:\Naiii\APK\RenPY\renpy-8.2.3-sdk\renpy\display\screen.py", line 697, in update
     self.screen.function(**self.scope)
-  File "game/screens.rpy", line 362, in execute
-    screen main_menu():
-  File "game/screens.rpy", line 362, in execute
-    screen main_menu():
-  File "game/screens.rpy", line 375, in execute
-    use navigation
-  File "game/screens.rpy", line 288, in execute
-    screen navigation():
-  File "game/screens.rpy", line 288, in execute
-    screen navigation():
-  File "game/screens.rpy", line 290, in execute
-    vbox:
-  File "game/screens.rpy", line 315, in execute
-    if renpy.get_screen(game_menu):
-  File "game/screens.rpy", line 315, in <module>
-    if renpy.get_screen(game_menu):
-NameError: name 'game_menu' is not defined
+  File "game/screens.rpy", line 605, in execute
+    screen save():
+  File "game/screens.rpy", line 605, in execute
+    screen save():
+  File "game/screens.rpy", line 609, in execute
+    use file_slots(_("Save"))
+  File "game/screens.rpy", line 619, in execute
+    screen file_slots(title):
+  File "game/screens.rpy", line 619, in execute
+    screen file_slots(title):
+  File "game/screens.rpy", line 623, in execute
+    use game_menu(title):
+  File "game/screens.rpy", line 433, in execute
+    screen game_menu(title, scroll=None, yinitial=0.0, spacing=0):
+  File "game/screens.rpy", line 433, in execute
+    screen game_menu(title, scroll=None, yinitial=0.0, spacing=0):
+  File "game/screens.rpy", line 437, in execute
+    if main_menu:
+  File "game/screens.rpy", line 440, in execute
+    add gui.game_menu_background
+  File "F:\Naiii\APK\RenPY\renpy-8.2.3-sdk\renpy\sl2\sldisplayables.py", line 451, in sl2add
+    d = renpy.easy.displayable(d, scope=scope)
+  File "F:\Naiii\APK\RenPY\renpy-8.2.3-sdk\renpy\easy.py", line 117, in displayable
+    raise Exception("An empty string cannot be used as a displayable.")
+Exception: An empty string cannot be used as a displayable.
 
 Windows-10-10.0.19045 AMD64
 Ren'Py 8.2.3.24061702
 HOLLOW 1.0
-Tue Jun 25 21:10:54 2024
+Wed Jun 26 13:42:55 2024

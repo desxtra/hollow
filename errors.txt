@@ -2,9 +2,7 @@
 errors listed below, and try again.
 
 
-File "game/screens.rpy", line 297: keyword argument 'xysize' is incompatible with 'xsize'.
-    xysize 100
-          ^
+File "game/screens.rpy", line 319: Indentation mismatch.
 
 Ren'Py Version: Ren'Py 8.2.3.24061702
-Tue Jun 25 21:35:21 2024
+Wed Jun 26 13:40:27 2024
