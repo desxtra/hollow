@@ -1,33 +1,41 @@
 ﻿# The script of the game goes in this file.
 
-# Declare characters used by this game. The color argument colorizes the
-# name of the character.
-
-define e = Character("Eileen")
+define avrial = Character("???")
 
 
 # The game starts here.
 
 label start:
 
-    # Show a background. This uses a placeholder by default, but you can
-    # add a file (named either "bg room.png" or "bg room.jpg") to the
-    # images directory to show it.
+    # CHAPTER 1 : Awakened in the Unknown
 
-    scene bg room
+    scene bg forest-1 # Awal
 
-    # This shows a character sprite. A placeholder is used, but you can
-    # replace it by adding a file named "eileen happy.png" to the images
-    # directory.
+    "Pada suatu malam di hutan, ada seorang lelaki yang tergeletak dibawah pohon"
 
-    show eileen happy
+    show avrial-bloody
 
-    # These display lines of dialogue.
+    "..."
 
-    e "You've created a new Ren'Py game."
+    show avrial-foggy
 
-    e "Once you add a story, pictures, and music, you can release it to the world!"
+    "..."
+
+    show avrial-awakened 
+
+    mc "..."
+
+    show avrial-tolahtoleh
+
+    show avrial-bangkit
+
+    show avrial-walking
+
+    scene bawah-pohon # avrial bawah pohon
+
+    show avrial-nyender
+
+
 
     # This ends the game.
-
     return
