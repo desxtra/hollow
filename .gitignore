@@ -1,4 +1,10 @@
 
+
+.vscode/
+game/saves/*
+game/cache/*
+
+
 .vscode/
 game/saves/*
 game/cache/*
