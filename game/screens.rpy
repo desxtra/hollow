@@ -291,14 +291,14 @@ screen navigation():
         style_prefix "navigation"
 
 
-        if renpy.get_screen("main_menu"):
-            xalign 0.73
-            xsize 2
-            ysize 1
-            yalign 0.73
-        else: 
-            xpos 130
-            yalign 0.5
+        # if renpy.get_screen("main_menu"):
+        #     xalign 0.73
+        #     xsize 2
+        #     ysize 1
+        #     yalign 0.73
+        # else: 
+        #     xpos 130
+        #     yalign 0.5
         
         
 
@@ -306,9 +306,13 @@ screen navigation():
 
         if renpy.get_screen("main_menu"):
 
-            textbutton _("Start") action Start() 
+            # textbutton _("Start") action Start()
+            imagebutton auto "gui/mainMenu/buttons/begin_%s.png" xpos 3 ypos 524 action Start() 
+            
+            # textbutton _("Load") action ShowMenu("load")
+            imagebutton auto "gui/mainMenu/buttons/continue_%s.png" xpos 7 ypos 530 action ShowMenu("load")
 
-        if not main_menu:
+        else:
 
 
             textbutton _("Main Menu") action MainMenu()
@@ -317,8 +321,11 @@ screen navigation():
 
             textbutton _("History") action ShowMenu("history")
 
+            textbutton _("About") action ShowMenu("about")
 
-        textbutton _("Load") action ShowMenu("load")
+
+
+        
 
         textbutton _("Options") action ShowMenu("preferences")
 
@@ -326,11 +333,8 @@ screen navigation():
 
             textbutton _("End Replay") action EndReplay(confirm=True)
 
-          
 
-        textbutton _("About") action ShowMenu("about")
-
-        if renpy.variant("pc") or (renpy.variant("web") and not renpy.variant("mobile")):
+        if not renpy.get_screen("main_menu") and renpy.variant("pc") or (renpy.variant("web") and not renpy.variant("mobile")):
 
             ## Help isn't necessary or relevant to mobile devices.
             textbutton _("Help") action ShowMenu("help")

@@ -1,87 +1,64 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
-While running game code:
-  File "game/screens.rpy", line 605, in execute
-    screen save():
-  File "game/screens.rpy", line 605, in execute
-    screen save():
-  File "game/screens.rpy", line 609, in execute
-    use file_slots(_("Save"))
-  File "game/screens.rpy", line 619, in execute
-    screen file_slots(title):
-  File "game/screens.rpy", line 619, in execute
-    screen file_slots(title):
-  File "game/screens.rpy", line 623, in execute
-    use game_menu(title):
-  File "game/screens.rpy", line 433, in execute
-    screen game_menu(title, scroll=None, yinitial=0.0, spacing=0):
-  File "game/screens.rpy", line 433, in execute
-    screen game_menu(title, scroll=None, yinitial=0.0, spacing=0):
-  File "game/screens.rpy", line 437, in execute
-    if main_menu:
-  File "game/screens.rpy", line 440, in execute
-    add gui.game_menu_background
-Exception: An empty string cannot be used as a displayable.
+After initialization, but before game start.
+  File "game/screens.rpy", line 288, in prepare_screen
+    screen navigation():
+  File "game/screens.rpy", line 288, in prepare
+    screen navigation():
+  File "game/screens.rpy", line 290, in prepare
+    vbox:
+  File "game/screens.rpy", line 290, in prepare
+    vbox:
+  File "game/screens.rpy", line 307, in prepare
+    if renpy.get_screen("main_menu"):
+  File "game/screens.rpy", line 307, in prepare
+    if renpy.get_screen("main_menu"):
+  File "game/screens.rpy", line 310, in prepare
+    imagebutton auto "gui/mainMenu/buttons/begin_%s.png" xpos 3 ypos 524 action Start() hovered [mouse "hand"]
+  File "game/screens.rpy", line 310, in prepare
+    imagebutton auto "gui/mainMenu/buttons/begin_%s.png" xpos 3 ypos 524 action Start() hovered [mouse "hand"]
+SyntaxError: invalid syntax (game/screens.rpy, line 310)
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "renpy/common/_layout/screen_load_save.rpym", line 35, in script
-    $ ui.interact()
-  File "F:\Naiii\APK\RenPY\renpy-8.2.3-sdk\renpy\ast.py", line 823, in execute
-    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
-  File "F:\Naiii\APK\RenPY\renpy-8.2.3-sdk\renpy\python.py", line 1178, in py_exec_bytecode
-    exec(bytecode, globals, locals)
-  File "renpy/common/_layout/screen_load_save.rpym", line 35, in <module>
-    $ ui.interact()
-  File "F:\Naiii\APK\RenPY\renpy-8.2.3-sdk\renpy\ui.py", line 301, in interact
-    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
-  File "F:\Naiii\APK\RenPY\renpy-8.2.3-sdk\renpy\display\core.py", line 2166, in interact
-    repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, pause=pause, pause_start=pause_start, pause_modal=pause_modal, **kwargs) # type: ignore
-  File "F:\Naiii\APK\RenPY\renpy-8.2.3-sdk\renpy\display\core.py", line 2688, in interact_core
-    root_widget.visit_all(lambda d : d.per_interact())
-  File "F:\Naiii\APK\RenPY\renpy-8.2.3-sdk\renpy\display\displayable.py", line 431, in visit_all
-    d.visit_all(callback, seen)
-  File "F:\Naiii\APK\RenPY\renpy-8.2.3-sdk\renpy\display\displayable.py", line 431, in visit_all
-    d.visit_all(callback, seen)
-  File "F:\Naiii\APK\RenPY\renpy-8.2.3-sdk\renpy\display\displayable.py", line 431, in visit_all
-    d.visit_all(callback, seen)
-  [Previous line repeated 1 more time]
-  File "F:\Naiii\APK\RenPY\renpy-8.2.3-sdk\renpy\display\screen.py", line 480, in visit_all
-    callback(self)
-  File "F:\Naiii\APK\RenPY\renpy-8.2.3-sdk\renpy\display\core.py", line 2688, in <lambda>
-    root_widget.visit_all(lambda d : d.per_interact())
-  File "F:\Naiii\APK\RenPY\renpy-8.2.3-sdk\renpy\display\screen.py", line 491, in per_interact
-    self.update()
-  File "F:\Naiii\APK\RenPY\renpy-8.2.3-sdk\renpy\display\screen.py", line 697, in update
-    self.screen.function(**self.scope)
-  File "game/screens.rpy", line 605, in execute
-    screen save():
-  File "game/screens.rpy", line 605, in execute
-    screen save():
-  File "game/screens.rpy", line 609, in execute
-    use file_slots(_("Save"))
-  File "game/screens.rpy", line 619, in execute
-    screen file_slots(title):
-  File "game/screens.rpy", line 619, in execute
-    screen file_slots(title):
-  File "game/screens.rpy", line 623, in execute
-    use game_menu(title):
-  File "game/screens.rpy", line 433, in execute
-    screen game_menu(title, scroll=None, yinitial=0.0, spacing=0):
-  File "game/screens.rpy", line 433, in execute
-    screen game_menu(title, scroll=None, yinitial=0.0, spacing=0):
-  File "game/screens.rpy", line 437, in execute
-    if main_menu:
-  File "game/screens.rpy", line 440, in execute
-    add gui.game_menu_background
-  File "F:\Naiii\APK\RenPY\renpy-8.2.3-sdk\renpy\sl2\sldisplayables.py", line 451, in sl2add
-    d = renpy.easy.displayable(d, scope=scope)
-  File "F:\Naiii\APK\RenPY\renpy-8.2.3-sdk\renpy\easy.py", line 117, in displayable
-    raise Exception("An empty string cannot be used as a displayable.")
-Exception: An empty string cannot be used as a displayable.
+  File "F:\Naiii\APK\RenPY\renpy-8.2.3-sdk\renpy\bootstrap.py", line 359, in bootstrap
+    renpy.main.main()
+  File "F:\Naiii\APK\RenPY\renpy-8.2.3-sdk\renpy\main.py", line 637, in main
+    run(restart)
+  File "F:\Naiii\APK\RenPY\renpy-8.2.3-sdk\renpy\main.py", line 94, in run
+    renpy.display.screen.prepare_screens()
+  File "F:\Naiii\APK\RenPY\renpy-8.2.3-sdk\renpy\display\screen.py", line 1026, in prepare_screens
+    s.ast.prepare_screen()
+  File "game/screens.rpy", line 288, in prepare_screen
+    screen navigation():
+  File "game/screens.rpy", line 288, in prepare
+    screen navigation():
+  File "game/screens.rpy", line 290, in prepare
+    vbox:
+  File "game/screens.rpy", line 290, in prepare
+    vbox:
+  File "game/screens.rpy", line 307, in prepare
+    if renpy.get_screen("main_menu"):
+  File "game/screens.rpy", line 307, in prepare
+    if renpy.get_screen("main_menu"):
+  File "game/screens.rpy", line 310, in prepare
+    imagebutton auto "gui/mainMenu/buttons/begin_%s.png" xpos 3 ypos 524 action Start() hovered [mouse "hand"]
+  File "game/screens.rpy", line 310, in prepare
+    imagebutton auto "gui/mainMenu/buttons/begin_%s.png" xpos 3 ypos 524 action Start() hovered [mouse "hand"]
+  File "F:\Naiii\APK\RenPY\renpy-8.2.3-sdk\renpy\py3analysis.py", line 803, in ast_eval
+    return self.ast_eval_literal(expr)[0]
+  File "F:\Naiii\APK\RenPY\renpy-8.2.3-sdk\renpy\py3analysis.py", line 785, in ast_eval_literal
+    expr = py_compile(expr, 'eval', ast_node=True)
+  File "F:\Naiii\APK\RenPY\renpy-8.2.3-sdk\renpy\python.py", line 1144, in py_compile
+    raise e
+  File "F:\Naiii\APK\RenPY\renpy-8.2.3-sdk\renpy\python.py", line 1081, in py_compile
+    raise orig_e
+  File "F:\Naiii\APK\RenPY\renpy-8.2.3-sdk\renpy\python.py", line 1073, in py_compile
+    tree = compile(source, filename, py_mode, ast.PyCF_ONLY_AST | flags, 1)
+SyntaxError: invalid syntax (game/screens.rpy, line 310)
 
 Windows-10-10.0.19045 AMD64
 Ren'Py 8.2.3.24061702
 HOLLOW 1.0
-Wed Jun 26 13:42:55 2024
+Sat Jun 29 14:02:44 2024

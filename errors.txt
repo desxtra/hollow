@@ -2,7 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/screens.rpy", line 319: Indentation mismatch.
+File "game/screens.rpy", line 313: expected a keyword argument, colon, or end of line.
+    imagebutton auto "gui/mainMenu/buttons/continue_%s.png" xpos 4= ypos 537 action ShowMenu("load")
+                                                                  ^
 
 Ren'Py Version: Ren'Py 8.2.3.24061702
-Wed Jun 26 13:40:27 2024
+Sat Jun 29 13:45:06 2024
