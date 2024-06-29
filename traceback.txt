@@ -1,64 +1,32 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
-After initialization, but before game start.
-  File "game/screens.rpy", line 288, in prepare_screen
-    screen navigation():
-  File "game/screens.rpy", line 288, in prepare
-    screen navigation():
-  File "game/screens.rpy", line 290, in prepare
-    vbox:
-  File "game/screens.rpy", line 290, in prepare
-    vbox:
-  File "game/screens.rpy", line 307, in prepare
-    if renpy.get_screen("main_menu"):
-  File "game/screens.rpy", line 307, in prepare
-    if renpy.get_screen("main_menu"):
-  File "game/screens.rpy", line 310, in prepare
-    imagebutton auto "gui/mainMenu/buttons/begin_%s.png" xpos 3 ypos 524 action Start() hovered [mouse "hand"]
-  File "game/screens.rpy", line 310, in prepare
-    imagebutton auto "gui/mainMenu/buttons/begin_%s.png" xpos 3 ypos 524 action Start() hovered [mouse "hand"]
-SyntaxError: invalid syntax (game/screens.rpy, line 310)
+While running game code:
+  File "renpy/common/00start.rpy", line 193, in script
+    python:
+  File "renpy/common/00start.rpy", line 194, in <module>
+    renpy.execute_default_statement(True)
+  File "game/screens.rpy", line 1891, in execute_default
+    default quick_menu = True
+Exception: store.quick_menu is being given a default a second time.
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "F:\Naiii\APK\RenPY\renpy-8.2.3-sdk\renpy\bootstrap.py", line 359, in bootstrap
-    renpy.main.main()
-  File "F:\Naiii\APK\RenPY\renpy-8.2.3-sdk\renpy\main.py", line 637, in main
-    run(restart)
-  File "F:\Naiii\APK\RenPY\renpy-8.2.3-sdk\renpy\main.py", line 94, in run
-    renpy.display.screen.prepare_screens()
-  File "F:\Naiii\APK\RenPY\renpy-8.2.3-sdk\renpy\display\screen.py", line 1026, in prepare_screens
-    s.ast.prepare_screen()
-  File "game/screens.rpy", line 288, in prepare_screen
-    screen navigation():
-  File "game/screens.rpy", line 288, in prepare
-    screen navigation():
-  File "game/screens.rpy", line 290, in prepare
-    vbox:
-  File "game/screens.rpy", line 290, in prepare
-    vbox:
-  File "game/screens.rpy", line 307, in prepare
-    if renpy.get_screen("main_menu"):
-  File "game/screens.rpy", line 307, in prepare
-    if renpy.get_screen("main_menu"):
-  File "game/screens.rpy", line 310, in prepare
-    imagebutton auto "gui/mainMenu/buttons/begin_%s.png" xpos 3 ypos 524 action Start() hovered [mouse "hand"]
-  File "game/screens.rpy", line 310, in prepare
-    imagebutton auto "gui/mainMenu/buttons/begin_%s.png" xpos 3 ypos 524 action Start() hovered [mouse "hand"]
-  File "F:\Naiii\APK\RenPY\renpy-8.2.3-sdk\renpy\py3analysis.py", line 803, in ast_eval
-    return self.ast_eval_literal(expr)[0]
-  File "F:\Naiii\APK\RenPY\renpy-8.2.3-sdk\renpy\py3analysis.py", line 785, in ast_eval_literal
-    expr = py_compile(expr, 'eval', ast_node=True)
-  File "F:\Naiii\APK\RenPY\renpy-8.2.3-sdk\renpy\python.py", line 1144, in py_compile
-    raise e
-  File "F:\Naiii\APK\RenPY\renpy-8.2.3-sdk\renpy\python.py", line 1081, in py_compile
-    raise orig_e
-  File "F:\Naiii\APK\RenPY\renpy-8.2.3-sdk\renpy\python.py", line 1073, in py_compile
-    tree = compile(source, filename, py_mode, ast.PyCF_ONLY_AST | flags, 1)
-SyntaxError: invalid syntax (game/screens.rpy, line 310)
+  File "renpy/common/00start.rpy", line 193, in script
+    python:
+  File "F:\Naiii\APK\RenPY\renpy-8.2.3-sdk\renpy\ast.py", line 823, in execute
+    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
+  File "F:\Naiii\APK\RenPY\renpy-8.2.3-sdk\renpy\python.py", line 1178, in py_exec_bytecode
+    exec(bytecode, globals, locals)
+  File "renpy/common/00start.rpy", line 194, in <module>
+    renpy.execute_default_statement(True)
+  File "F:\Naiii\APK\RenPY\renpy-8.2.3-sdk\renpy\exports.py", line 4100, in execute_default_statement
+    i.execute_default(start)
+  File "game/screens.rpy", line 1891, in execute_default
+    default quick_menu = True
+Exception: store.quick_menu is being given a default a second time.
 
 Windows-10-10.0.19045 AMD64
 Ren'Py 8.2.3.24061702
 HOLLOW 1.0
-Sat Jun 29 14:02:44 2024
+Sat Jun 29 22:16:51 2024
