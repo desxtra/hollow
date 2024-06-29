@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/screens.rpy", line 297: keyword argument 'xysize' is incompatible with 'xsize'.
-    xysize 100
-          ^
+File "game/screens.rpy", line 313: expected a keyword argument, colon, or end of line.
+    imagebutton auto "gui/mainMenu/buttons/continue_%s.png" xpos 4= ypos 537 action ShowMenu("load")
+                                                                  ^
 
 Ren'Py Version: Ren'Py 8.2.3.24061702
-Tue Jun 25 21:35:21 2024
+Sat Jun 29 13:45:06 2024
