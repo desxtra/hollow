@@ -291,14 +291,14 @@ screen navigation():
         style_prefix "navigation"
 
 
-        if renpy.get_screen("main_menu"):
-            xalign 0.73
-            xsize 2
-            ysize 1
-            yalign 0.73
-        else: 
-            xpos 130
-            yalign 0.5
+        # if renpy.get_screen("main_menu"):
+        #     xalign 0.73
+        #     xsize 2
+        #     ysize 1
+        #     yalign 0.73
+        # else: 
+        #     xpos 130
+        #     yalign 0.5
         
         
 
@@ -306,7 +306,8 @@ screen navigation():
 
         if renpy.get_screen("main_menu"):
 
-            textbutton _("Start") action Start() 
+            imagebutton auto "gui/mainMenu/buttons/begin_%s.png" xpos 2 ypos 523 action Start()
+            # textbutton _("Start") action Start()
 
         if not main_menu:
 
@@ -317,8 +318,8 @@ screen navigation():
 
             textbutton _("History") action ShowMenu("history")
 
-
-        textbutton _("Load") action ShowMenu("load")
+        imagebutton auto "gui/mainMenu/buttons/continue_%s.png" xpos 7 ypos 530 action ShowMenu("load")
+        # textbutton _("Load") action ShowMenu("load")
 
         textbutton _("Options") action ShowMenu("preferences")
 
@@ -1622,3 +1623,4 @@ style slider_vbox:
 style slider_slider:
     variant "small"
     xsize 900
+    
